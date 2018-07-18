@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileUtripPro.Views.ChecklistPage"
+             x:Name="CheckList"
+            Title="CHECKLIST"
+             xmlns:inp="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             xmlns:con="clr-namespace:Messier16.Forms.Controls;assembly=Messier16.Forms.Controls"
+             >
+    <ContentPage.Content>
+        
+            <StackLayout Spacing="3"  BackgroundColor="#efefef">
+                <StackLayout Orientation="Horizontal" Spacing="1" Margin="3,10,3,10">
+                   <Label Text="Checklist for machine: " FontSize="20" TextColor="#aaaaaa"/>
+                   <Label TextColor="#888888" Text="1331425123213" FontSize="20" FontAttributes="Bold"/>
+                </StackLayout>
+
+               <ListView Margin="3,10,3,10" 
+                         ItemsSource="{Binding CheckList}"
+                         RowHeight="80"
+                         SeparatorVisibility="None"
+                         CachingStrategy="RecycleElement"
+                         BackgroundColor="Transparent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HasShadow="false" Margin="4" Padding="0" BackgroundColor="White" HeightRequest="80" CornerRadius="10">
+                                <Grid Padding="0" Margin="0" RowSpacing="0" ColumnSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"/>
+                                        <ColumnDefinition Width="1"/>
+
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="40"/>
+                                    </Grid.ColumnDefinitions>
+                                    <!--<inp:CheckBox Color="#18b300" Text="" Type="Check" Margin="13,0,0,0" HorizontalOptions="Center" VerticalOptions="Center" IsChecked="{Binding IsChecked}"/>-->
+                                    <con:Checkbox Grid.Column="0" Checked="{Binding IsChecked, Mode=TwoWay}" WidthRequest="40" TickColor="#b6d6a9" CheckboxBackgroundColor="Green" HorizontalOptions="Center" VerticalOptions="Center"></con:Checkbox> 
+                                    <BoxView Margin="0,3,0,3" BackgroundColor="White" HeightRequest="40" WidthRequest="1" Grid.Column="1"/>
+                                    <Grid Grid.Column="2" >
+                                        <StackLayout Margin="3" Spacing="1" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+                                            <Label FontSize="21" FontAttributes="Bold" Text="{Binding Check.CheckTitle}"/>
+                                            <Label FontSize="17" TextColor="Gray" Text="{Binding Check.CheckDescription}" LineBreakMode="TailTruncation" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="30"  />
+                                        </StackLayout>
+                                     
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="5"/>
+                                            <ColumnDefinition Width="20"/>
+                                            <ColumnDefinition Width="15"/>
+                                            
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="1" Source="RightGray_icon.png"  Aspect="AspectFit" HeightRequest="80" WidthRequest="40"/>
+
+                                    </Grid>
+
+                                </Grid>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference CheckList}, Path=BindingContext.EditNotes}"
+                                                          CommandParameter="{Binding Check}"
+                                                          NumberOfTapsRequired="1"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                
+
+
+            </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileUtripPro.Views.RegistrationPage"
+             Title="REGISTRATION"
+             >
+    <ContentPage.Content>
+        <Grid BackgroundColor="#efefef">
+            
+       
+            <StackLayout Spacing="15" Orientation="Vertical" Margin="15">
+                <!--<Label Text="Registration" FontSize="30" FontAttributes="Bold"></Label>-->
+                <!--<BoxView BackgroundColor="Gray" HeightRequest="0.5" />-->
+                <Label Margin="0,20,0,0" FontSize="20" Text="Work Center" FontAttributes="Bold"/>
+                <Button Text="Register Work Center" FontAttributes="Bold" FontSize="Medium" CornerRadius="10"  TextColor="White" BackgroundColor="#18b300"/>  
+                <Frame BackgroundColor="White" HasShadow="false" CornerRadius="10" >
+                    <StackLayout Spacing="10">
+                        <Grid Padding="0" Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="Machine" LineBreakMode="MiddleTruncation" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" Text="12wekhgrr3213123" LineBreakMode="MiddleTruncation" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="End" VerticalOptions="Center"/>
+                        </Grid>
+                        <BoxView BackgroundColor="Gray" HeightRequest="1" Margin="0"/>
+                        <Grid Padding="0" Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="Machine Nr. " HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="12wekhgrr3asjdgashdgjsagdasdhksahk213123" TextColor="Gray" HorizontalOptions="End" VerticalOptions="Center"/>
+                        </Grid>
+                        <BoxView BackgroundColor="Gray" HeightRequest="1"/>
+                        <Grid Padding="0" Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="Detail" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="12wekhgrr3213123" TextColor="Gray" HorizontalOptions="End" VerticalOptions="Center"/>
+                        </Grid>
+                    </StackLayout>
+
+
+                </Frame>
+                <!--<BoxView BackgroundColor="Gray" HeightRequest="0.5" />-->
+                <Label Margin="0,20,0,0" FontSize="20" Text="Work Order"  FontAttributes="Bold"/>
+                <Button Text="Register Work Order" FontAttributes="Bold" FontSize="Medium" CornerRadius="10"  TextColor="White" BackgroundColor="#18b300"/>  
+                <Frame BackgroundColor="White" HasShadow="false" CornerRadius="10" >
+                    <StackLayout Spacing="15">
+                        <Grid Padding="0" Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="Work order Nr. " HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="12wekhgrr3213123" TextColor="Gray" HorizontalOptions="End" VerticalOptions="Center"/>
+                        </Grid>
+                        <BoxView BackgroundColor="Gray" HeightRequest="1" Margin="0"/>
+                        <Grid Padding="0" Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontAttributes="Bold"  LineBreakMode="MiddleTruncation" Text="Work order Name. " HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" FontAttributes="Bold"  LineBreakMode="MiddleTruncation" Text="12wekhasdasd asdasdasdasdasdasdasads fdsdgjsagdasdh ksahk2 13123" TextColor="Gray" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                        </Grid>
+                        <BoxView BackgroundColor="Gray" HeightRequest="1"/>
+                        <Grid Padding="0" Margin="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="70*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="Detail 3" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <Label Grid.Column="1" FontAttributes="Bold" LineBreakMode="MiddleTruncation" Text="12wekhgrr3213123" TextColor="Gray" HorizontalOptions="End" VerticalOptions="Center"/>
+                        </Grid>
+                       
+                    </StackLayout>
+
+
+                </Frame>
+            </StackLayout> 
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
